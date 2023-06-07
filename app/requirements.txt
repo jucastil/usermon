@@ -1,0 +1,10 @@
+dash
+plotly
+pandas
+gunicorn
+dash_bio
+dash_auth
+matplotlib
+flask
+flask_login
+flask_caching
