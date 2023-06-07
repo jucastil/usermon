@@ -1,0 +1,82 @@
+
+  ]
+    }]
+});
+chart.render();
+
+}
+
+
+
+
+</script>
+</head>
+<body>
+
+<div align="center">
+ <h1 >Dept. Structural Biology</h1>
+ <img src="mpibp_logo_webnotext.gif" alt="MPIBP logo"></div>
+ <div align="center"><H1><B>SB Online Monitor: User Impact</B></H1>
+<br> 
+<input type="button" style="background-color:lime; padding: 10px; border:none;" onClick="window.location ='http://sbdoc.sb.biophys.mpg.de/data/'" value="Back to main"/> 
+<input type="button" style="background-color:yellow; padding: 10px; border:none;" onClick="window.location ='http://sbdoc.sb.biophys.mpg.de/storage/index_cryo.php'" value="Show CRYO bubbles"/>
+<input type="text" style="height:35px; width:200px; font-family: Arial, Helvetica, sans-serif;" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"></H1>
+
+
+<h2>Last Update</h2>
+<h2>Total Instances</h2>
+ <br>
+
+
+<div id="chartCloudSBDATA" style="height: 500px; width: 80%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<style>
+		table { border-collapse: collapse; width: 100%;}
+		th, td { text-align: right; padding: 8px; }
+		tr:nth-child(even) {background-color: #f2f2f2;}
+</style> 
+
+<style>
+	* {
+  		box-sizing: border-box;
+	  }
+
+	  #myInput {
+  		background-image: url('searchicon.png');
+  		background-position: 10px 10px;
+ 		 background-repeat: no-repeat;
+  		width: 100%;
+  		font-size: 16px;
+  		padding: 12px 20px 12px 40px;
+  		border: 1px solid #ddd;
+  		margin-bottom: 12px;
+	  }
+
+	  #myTable {
+  		border-collapse: collapse;
+  		width: 100%;
+  		border: 1px solid #ddd;
+  		font-size: 18px;
+	  }
+
+	  #myTable th, #myTable td {
+  		text-align: right;
+  		padding: 12px;
+	  }
+
+	  #myTable tr {
+ 		 border-bottom: 1px solid #ddd;
+	  }
+
+	  #myTable tr.header, #myTable tr:hover {
+  		background-color: #f1f1f1;
+	  }
+</style>
+
+
+<table class="sortable" id="myTable" style=" float: center; font-size:medium; border: 1px solid #e3e3e3; background-color: #f2f2f2; width: 80%; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px; margin:0 10px; ">
+
+<br><br>
+<h2>Tabulated values. Click on the column to order. Colour code: First step indicates >0.5M, each gradient step +1M until a max of 4M </h2>
+<br><br>
+<th>User</th> <th>Port</th> <th>Password </th> <th>Link</th> <th>LOCAL (G)</th> <th>LOCAL (nfiles)</th> <th> CRYO (G)</th> <th> CRYO (nfiles)</th>  

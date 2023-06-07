@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>SB Cloud Monitor</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="sorttable.js"></script>
+<script>
+		function myFunction() {
+  			var input, filter, table, tr, td, i, txtValue;
+  			input = document.getElementById("myInput");
+  			filter = input.value.toUpperCase();
+  			table = document.getElementById("myTable");
+  			tr = table.getElementsByTagName("tr");
+  			for (i = 0; i < tr.length; i++) {
+    				td = tr[i].getElementsByTagName("td")[0];
+    				if (td) {
+      					txtValue = td.textContent || td.innerText;
+      					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        					tr[i].style.display = "";
+      					} else {
+        					tr[i].style.display = "none";
+      					}
+    				}       
+  			}
+		}
+</script>	
+<script>
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartCloudSBDATA", {
+    animationEnabled: true,
+    zoomEnabled: true,
+    theme: "light2",
+    title:{
+        text: "User Impact : CRYO"
+    },
+    axisX: {
+        title:"CRYO size (G)",
+        minimum: -10000,
+        maximum: 300000,
+        gridThickness: 1
+    },
+    axisY:{
+		minimum: -200000,
+        title: "CRYO total files"
+    },
+    data: [{
+        type: "bubble",
+        toolTipContent: "<b>Username: {name}</b><br/>CRYO (G): {x} <br/> CRYO (inodes): {y} <br/> LOCAL (G): {z}",
+        dataPoints: [
+
